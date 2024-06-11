@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Slap page
+// @name         Slap Page
 // @namespace    https://ellinet13.github.io/
 // @version      2024-06-11
 // @description  SLAP EM
