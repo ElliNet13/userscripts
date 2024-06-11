@@ -4,7 +4,7 @@
 // @version      2024-06-11
 // @description  SLAP EM using CTRL+Q
 // @author       ElliNet13
-// @match        https?://.*
+// @match        http*://*/*
 // @icon         https://ellinet13.github.io/ElliNet13.jpeg
 // @grant        none
 // @updateURL    https://ellinet13.github.io/userscripts/slap.user.js
