@@ -12,9 +12,6 @@
 
 (function() {
     function slap() {
-        // Alert before making changes
-        alert("AAAAAAAAAAAAAAAAA WHY DID YOU SLAP ME?!!?!?!!?!?!?!?!");
-
         // Replace text content with "AAAAAAAAAAA"
         function replaceTextWithA(element) {
             if (element.nodeType === Node.TEXT_NODE) {
@@ -53,10 +50,39 @@
         document.body.style.backgroundColor = 'rgba(255, 0, 0, 0.1)';
     }
 
+    function showSlapMessage() {
+        // Create a message element
+        const messageElement = document.createElement('div');
+        messageElement.textContent = 'Press CTRL+Q again to slap the page!';
+        messageElement.style.position = 'fixed';
+        messageElement.style.top = '20px';
+        messageElement.style.left = '20px';
+        messageElement.style.padding = '10px';
+        messageElement.style.backgroundColor = 'yellow';
+        messageElement.style.border = '2px solid black';
+        messageElement.style.zIndex = '9999';
+        document.body.appendChild(messageElement);
+
+        // Remove the message after a few seconds
+        setTimeout(function() {
+            messageElement.remove();
+        }, 5000);
+    }
+
+    let ctrlQPressed = false;
     document.addEventListener('keydown', function(event) {
         if (event.ctrlKey && event.key === 'q') {
             event.preventDefault(); // Prevent the default action if any
-            slap();
+            if (ctrlQPressed) {
+                showSlapMessage();
+                slap();
+            } else {
+                showSlapMessage();
+                ctrlQPressed = true;
+                setTimeout(function() {
+                    ctrlQPressed = false;
+                }, 3000); // Reset after 3 seconds
+            }
         }
     });
 })();
