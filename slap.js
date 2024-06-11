@@ -2,7 +2,7 @@
 // @name         Slap Page
 // @namespace    https://ellinet13.github.io/
 // @version      2024-06-11
-// @description  SLAP EM using CTRL+K
+// @description  SLAP EM using CTRL+Q
 // @author       ElliNet13
 // @match        http*://*/*
 // @icon         https://ellinet13.github.io/ElliNet13.jpeg
@@ -55,7 +55,7 @@
     }
 
     document.addEventListener('keydown', function(event) {
-        if (event.ctrlKey && event.key === 'k') {
+        if (event.ctrlKey && event.key === 'q') {
             event.preventDefault(); // Prevent the default action if any
             slap();
         }
