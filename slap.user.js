@@ -8,6 +8,7 @@
 // @icon         https://ellinet13.github.io/ElliNet13.jpeg
 // @grant        none
 // @updateURL    https://ellinet13.github.io/userscripts/slap.user.js
+// @downloadURL  https://ellinet13.github.io/userscripts/slap.user.js
 // ==/UserScript==
 
 (function() {
