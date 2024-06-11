@@ -7,8 +7,7 @@
 // @match        http*://*/*
 // @icon         https://ellinet13.github.io/ElliNet13.jpeg
 // @grant        none
-// @sandbox      DOM
-// @updateURL    https://ellinet13.github.io/userscripts/slap.js
+// @updateURL    https://ellinet13.github.io/userscripts/slap.user.js
 // ==/UserScript==
 
 (function() {
