@@ -58,7 +58,7 @@
         messageElement.style.top = '20px';
         messageElement.style.left = '20px';
         messageElement.style.padding = '10px';
-        messageElement.style.backgroundColor = 'yellow';
+        messageElement.style.backgroundColor = 'red';
         messageElement.style.border = '2px solid black';
         messageElement.style.zIndex = '9999';
         document.body.appendChild(messageElement);
