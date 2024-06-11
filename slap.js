@@ -2,7 +2,7 @@
 // @name         Slap Page
 // @namespace    https://ellinet13.github.io/
 // @version      2024-06-11
-// @description  SLAP EM
+// @description  SLAP EM using CTRL+K
 // @author       ElliNet13
 // @match        http*://*/*
 // @icon         https://ellinet13.github.io/ElliNet13.jpeg
