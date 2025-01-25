@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Slap Page
 // @namespace    https://ellinet13.github.io/
-// @version      2024-06-11
+// @version      2025-01-25
 // @description  SLAP EM using CTRL+Q
 // @author       ElliNet13
 // @match        *://*/*
