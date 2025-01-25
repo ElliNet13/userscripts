@@ -2,7 +2,7 @@
 // @name            Infinite Craft Stuff
 // @namespace       https://ellinet13.github.io
 // @match           https://neal.fun/infinite-craft/*
-// @version         1.8
+// @version         1.9
 // @author          ElliNet13
 // @description     A script that adds stuff features to Infinite Craft.
 // @downloadURL     https://ellinet13.github.io/userscripts/ifadd.user.js
@@ -36,7 +36,7 @@ function add(emoji, name, discovered) {
 function craft() {
     while (true) {
         add(prompt("What will be the emoji?"), prompt("What will be the name?"), confirm("Did you discover it?"));
-        if (confirm("Done adding stuff?")) {
+        if (!confirm("Add more?")) {
             location.reload();
             break; 
         }
