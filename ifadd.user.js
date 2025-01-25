@@ -2,7 +2,7 @@
 // @name            Infinite Craft Stuff
 // @namespace       https://ellinet13.github.io
 // @match           https://neal.fun/infinite-craft/*
-// @version         1.6
+// @version         1.7
 // @author          ElliNet13
 // @description     A script that adds stuff features to Infinite Craft.
 // @downloadURL     https://ellinet13.github.io/userscripts/ifadd.user.js
@@ -173,16 +173,16 @@ button.addEventListener('click', () => {
 
     // Add a text set  button
     const textButton = document.createElement('button');
-    cheatButton.textContent = 'Text set';
-    cheatButton.style.marginTop = '20px';
-    cheatButton.style.padding = '10px 20px';
-    cheatButton.style.fontSize = '14px';
-    cheatButton.style.backgroundColor = '#0000FF';
-    cheatButton.style.color = 'white';
-    cheatButton.style.border = 'none';
-    cheatButton.style.borderRadius = '8px';
-    cheatButton.style.cursor = 'pointer';
-    cheatButton.addEventListener('click', () => {
+    textButton.textContent = 'Text set';
+    textButton.style.marginTop = '20px';
+    textButton.style.padding = '10px 20px';
+    textButton.style.fontSize = '14px';
+    textButton.style.backgroundColor = '#0000FF';
+    textButton.style.color = 'white';
+    textButton.style.border = 'none';
+    textButton.style.borderRadius = '8px';
+    textButton.style.cursor = 'pointer';
+    textButton.addEventListener('click', () => {
     if (confirm("Are you sure you want to use the text set? It will delete everything and only have text in your items.")) {
             removeAll()
             for (const text of getAllText()) {
