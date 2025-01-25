@@ -2,7 +2,7 @@
 // @name			Infinite Craft Stuff
 // @namespace		ifadd
 // @match			https://neal.fun/infinite-craft/*
-// @version			2.1.4
+// @version			1.1
 // @author			ElliNet13
 // @description		A script that adds stuff features to Infinite Craft.
 // @downloadURL		https://ellinet13.github.io/userscripts/ifadd.user.js
@@ -15,6 +15,14 @@ window.addEventListener('unhandledrejection', function(event) {
         alert("That combo will not work!")
     }
 });
+
+// Make an invisible file input
+const fileInput = document.createElement('input');
+fileInput.type = 'file';
+fileInput.style.position = 'absolute';
+fileInput.style.display = 'none'; // Hides the input and removes it from the layout
+fileInput.style.pointerEvents = 'none'; // Ensures no interaction with it
+fileInput.accept = ".json";
 
 // Funcs
 function add(emoji, name, discovered) {
@@ -71,6 +79,37 @@ class Backups {
 }
 
 backups = new Backups();
+
+// Event listener to handle the file input change
+fileInput.addEventListener('change', (event) => {
+  const file = event.target.files[0]; // Get the first selected file
+  
+  if (file) {
+    const reader = new FileReader();
+
+    reader.onload = () => {
+      try {
+        // Attempt to parse the file contents as JSON
+        const jsonData = JSON.parse(reader.result);
+        
+        // If successful, store it in localStorage
+        localStorage.setItem("infinite-craft-data", JSON.stringify(jsonData));
+        console.log('JSON data successfully stored in localStorage.');
+        location.reload()
+      } catch (error) {
+        console.error('Invalid JSON file:', error);
+        alert('The file contents are not valid JSON!');
+      }
+    };
+
+    reader.onerror = () => {
+      console.error('Error reading the file');
+    };
+
+    // Read the file as text (JSON)
+    reader.readAsText(file);
+  }
+});
 
 // Create a button element
 const button = document.createElement('button');
@@ -165,6 +204,62 @@ button.addEventListener('click', () => {
         }
     });
 
+        const saveFileButton = document.createElement('button');
+    saveButton.textContent = 'Save backup';
+    saveButton.style.marginTop = '20px';
+    saveButton.style.padding = '10px 20px';
+    saveButton.style.fontSize = '14px';
+    saveButton.style.backgroundColor = '#00FF00';
+    saveButton.style.color = 'white';
+    saveButton.style.border = 'none';
+    saveButton.style.borderRadius = '8px';
+    saveButton.style.cursor = 'pointer';
+    saveButton.addEventListener('click', () => {
+        // Get the data from localStorage
+        const data = localStorage.getItem('infinite-craft-data');
+
+        // Check if the data exists
+        if (data) {
+          // Parse the data into a JavaScript object
+          const jsonData = JSON.parse(data);
+  
+          // Convert the object to a JSON string
+          const jsonString = JSON.stringify(jsonData, null, 2);
+          
+          // Create a Blob with the JSON string and specify the MIME type
+          const blob = new Blob([jsonString], { type: 'application/json' });
+  
+          // Create a download link
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          a.download = 'infinite-craft-data.json';
+  
+          // Trigger the download
+          a.click();
+  
+          // Clean up: revoke the Blob URL and remove the link
+          URL.revokeObjectURL(a.href);
+          a.remove();
+        } else {
+          console.error('No data found in localStorage for "infinite-craft-data"');
+        }
+
+    });
+
+    const loadFileButton = document.createElement('button');
+    loadButton.textContent = 'Load backup (File)';
+    loadButton.style.marginTop = '20px';
+    loadButton.style.padding = '10px 20px';
+    loadButton.style.fontSize = '14px';
+    loadButton.style.backgroundColor = '#808080';
+    loadButton.style.color = 'white';
+    loadButton.style.border = 'none';
+    loadButton.style.borderRadius = '8px';
+    loadButton.style.cursor = 'pointer';
+    loadButton.addEventListener('click', () => {
+        fileInput.click();
+    });
+
     const saveButton = document.createElement('button');
     saveButton.textContent = 'Save backup';
     saveButton.style.marginTop = '20px';
@@ -195,6 +290,8 @@ button.addEventListener('click', () => {
 
     box.appendChild(cheatButton);
     box.appendChild(removeAllButton);
+    box.appendChild(saveFileButton);
+    box.appendChild(loadFileButton);
     box.appendChild(saveButton);
     box.appendChild(loadButton);
     box.appendChild(closeButton);
