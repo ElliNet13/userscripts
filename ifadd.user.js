@@ -1,12 +1,12 @@
 // ==UserScript==
-// @name			Infinite Craft Stuff
-// @namespace		ifadd
-// @match			https://neal.fun/infinite-craft/*
-// @version			1.1
-// @author			ElliNet13
-// @description		A script that adds stuff features to Infinite Craft.
-// @downloadURL		https://ellinet13.github.io/userscripts/ifadd.user.js
-// @updateURL		https://ellinet13.github.io/userscripts/ifadd.user.js
+// @name            Infinite Craft Stuff
+// @namespace       ifadd
+// @match           https://neal.fun/infinite-craft/*
+// @version         1.2
+// @author          ElliNet13
+// @description     A script that adds stuff features to Infinite Craft.
+// @downloadURL     https://ellinet13.github.io/userscripts/ifadd.user.js
+// @updateURL       https://ellinet13.github.io/userscripts/ifadd.user.js
 // ==/UserScript==
 
 // Well its not a fix for the problen but at least you know it happened
@@ -78,7 +78,7 @@ class Backups {
     }
 }
 
-backups = new Backups();
+const backups = new Backups();
 
 // Event listener to handle the file input change
 fileInput.addEventListener('change', (event) => {
@@ -204,17 +204,17 @@ button.addEventListener('click', () => {
         }
     });
 
-        const saveFileButton = document.createElement('button');
-    saveButton.textContent = 'Save backup';
-    saveButton.style.marginTop = '20px';
-    saveButton.style.padding = '10px 20px';
-    saveButton.style.fontSize = '14px';
-    saveButton.style.backgroundColor = '#00FF00';
-    saveButton.style.color = 'white';
-    saveButton.style.border = 'none';
-    saveButton.style.borderRadius = '8px';
-    saveButton.style.cursor = 'pointer';
-    saveButton.addEventListener('click', () => {
+    const saveFileButton = document.createElement('button');
+    saveFileButton.textContent = 'Save backup';
+    saveFileButton.style.marginTop = '20px';
+    saveFileButton.style.padding = '10px 20px';
+    saveFileButton.style.fontSize = '14px';
+    saveFileButton.style.backgroundColor = '#00FF00';
+    saveFileButton.style.color = 'white';
+    saveFileButton.style.border = 'none';
+    saveFileButton.style.borderRadius = '8px';
+    saveFileButton.style.cursor = 'pointer';
+    saveFileButton.addEventListener('click', () => {
         // Get the data from localStorage
         const data = localStorage.getItem('infinite-craft-data');
 
@@ -243,48 +243,47 @@ button.addEventListener('click', () => {
         } else {
           console.error('No data found in localStorage for "infinite-craft-data"');
         }
-
     });
 
     const loadFileButton = document.createElement('button');
-    loadButton.textContent = 'Load backup (File)';
-    loadButton.style.marginTop = '20px';
-    loadButton.style.padding = '10px 20px';
-    loadButton.style.fontSize = '14px';
-    loadButton.style.backgroundColor = '#808080';
-    loadButton.style.color = 'white';
-    loadButton.style.border = 'none';
-    loadButton.style.borderRadius = '8px';
-    loadButton.style.cursor = 'pointer';
-    loadButton.addEventListener('click', () => {
+    loadFileButton.textContent = 'Load backup (File)';
+    loadFileButton.style.marginTop = '20px';
+    loadFileButton.style.padding = '10px 20px';
+    loadFileButton.style.fontSize = '14px';
+    loadFileButton.style.backgroundColor = '#808080';
+    loadFileButton.style.color = 'white';
+    loadFileButton.style.border = 'none';
+    loadFileButton.style.borderRadius = '8px';
+    loadFileButton.style.cursor = 'pointer';
+    loadFileButton.addEventListener('click', () => {
         fileInput.click();
     });
 
-    const saveButton = document.createElement('button');
-    saveButton.textContent = 'Save backup';
-    saveButton.style.marginTop = '20px';
-    saveButton.style.padding = '10px 20px';
-    saveButton.style.fontSize = '14px';
-    saveButton.style.backgroundColor = '#00FF00';
-    saveButton.style.color = 'white';
-    saveButton.style.border = 'none';
-    saveButton.style.borderRadius = '8px';
-    saveButton.style.cursor = 'pointer';
-    saveButton.addEventListener('click', () => {
+    const saveBackupButton = document.createElement('button');
+    saveBackupButton.textContent = 'Save backup';
+    saveBackupButton.style.marginTop = '20px';
+    saveBackupButton.style.padding = '10px 20px';
+    saveBackupButton.style.fontSize = '14px';
+    saveBackupButton.style.backgroundColor = '#00FF00';
+    saveBackupButton.style.color = 'white';
+    saveBackupButton.style.border = 'none';
+    saveBackupButton.style.borderRadius = '8px';
+    saveBackupButton.style.cursor = 'pointer';
+    saveBackupButton.addEventListener('click', () => {
         backups.save(prompt("Enter the name for the backup:"));
     });
 
-    const loadButton = document.createElement('button');
-    loadButton.textContent = 'Load backup';
-    loadButton.style.marginTop = '20px';
-    loadButton.style.padding = '10px 20px';
-    loadButton.style.fontSize = '14px';
-    loadButton.style.backgroundColor = '#808080';
-    loadButton.style.color = 'white';
-    loadButton.style.border = 'none';
-    loadButton.style.borderRadius = '8px';
-    loadButton.style.cursor = 'pointer';
-    loadButton.addEventListener('click', () => {
+    const loadBackupButton = document.createElement('button');
+    loadBackupButton.textContent = 'Load backup';
+    loadBackupButton.style.marginTop = '20px';
+    loadBackupButton.style.padding = '10px 20px';
+    loadBackupButton.style.fontSize = '14px';
+    loadBackupButton.style.backgroundColor = '#808080';
+    loadBackupButton.style.color = 'white';
+    loadBackupButton.style.border = 'none';
+    loadBackupButton.style.borderRadius = '8px';
+    loadBackupButton.style.cursor = 'pointer';
+    loadBackupButton.addEventListener('click', () => {
         backups.load(prompt("Enter the backup name to load:"));
     });
 
@@ -292,8 +291,8 @@ button.addEventListener('click', () => {
     box.appendChild(removeAllButton);
     box.appendChild(saveFileButton);
     box.appendChild(loadFileButton);
-    box.appendChild(saveButton);
-    box.appendChild(loadButton);
+    box.appendChild(saveBackupButton);
+    box.appendChild(loadBackupButton);
     box.appendChild(closeButton);
 
     document.body.appendChild(box);
