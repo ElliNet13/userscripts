@@ -2,7 +2,7 @@
 // @name            Infinite Craft Stuff
 // @namespace       ifadd
 // @match           https://neal.fun/infinite-craft/*
-// @version         1.3
+// @version         1.4
 // @author          ElliNet13
 // @description     A script that adds stuff features to Infinite Craft.
 // @downloadURL     https://ellinet13.github.io/userscripts/ifadd.user.js
@@ -205,7 +205,7 @@ button.addEventListener('click', () => {
     });
 
     const saveFileButton = document.createElement('button');
-    saveFileButton.textContent = 'Save backup (backup)';
+    saveFileButton.textContent = 'Save backup (File)';
     saveFileButton.style.marginTop = '20px';
     saveFileButton.style.padding = '10px 20px';
     saveFileButton.style.fontSize = '14px';
