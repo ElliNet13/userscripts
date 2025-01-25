@@ -9,6 +9,7 @@
 // @grant        none
 // @updateURL    https://ellinet13.github.io/userscripts/slap.user.js
 // @downloadURL  https://ellinet13.github.io/userscripts/slap.user.js
+// @homepageURL		https://ellinet13.github.io/userscripts/
 // ==/UserScript==
 
 (function() {

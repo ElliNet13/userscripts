@@ -6,6 +6,7 @@
 // @author       ElliNet13
 // @match        *://aternos.org/*
 // @grant        none
+// @homepageURL		https://ellinet13.github.io/userscripts/
 // ==/UserScript==
 
 (function() {

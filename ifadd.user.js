@@ -7,6 +7,7 @@
 // @description     A script that adds stuff features to Infinite Craft.
 // @downloadURL     https://ellinet13.github.io/userscripts/ifadd.user.js
 // @updateURL       https://ellinet13.github.io/userscripts/ifadd.user.js
+// @homepageURL		https://ellinet13.github.io/userscripts/
 // ==/UserScript==
 
 // Well its not a fix for the problen but at least you know it happened
