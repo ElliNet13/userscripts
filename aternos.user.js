@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Auto-click "Continue with adblocker" on Aternos
-// @namespace    http://tampermonkey.net/
-// @version      1.0
+// @namespace    https://ellinet13.github.io
+// @version      1.1
 // @description  Automatically clicks "Continue with adblocker anyway" on Aternos
 // @author       ElliNet13
 // @match        *://aternos.org/*

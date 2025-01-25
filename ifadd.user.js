@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name            Infinite Craft Stuff
-// @namespace       ifadd
+// @namespace       https://ellinet13.github.io
 // @match           https://neal.fun/infinite-craft/*
-// @version         1.5
+// @version         1.6
 // @author          ElliNet13
 // @description     A script that adds stuff features to Infinite Craft.
 // @downloadURL     https://ellinet13.github.io/userscripts/ifadd.user.js
