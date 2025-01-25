@@ -13,7 +13,7 @@
 // Well its not a fix for the problen but at least you know it happened
 window.addEventListener('unhandledrejection', function(event) {
     if (event.reason == "TypeError: element.text.toLowerCase is not a function") {
-        alert("That combo will not work!")
+        alert("That combo will not work! Infinite Craft can be a little glichy sometimes.")
     }
 });
 
@@ -171,6 +171,29 @@ button.addEventListener('click', () => {
         document.body.removeChild(box);
     });
 
+    // Add a text set  button
+    const textButton = document.createElement('button');
+    cheatButton.textContent = 'Text set';
+    cheatButton.style.marginTop = '20px';
+    cheatButton.style.padding = '10px 20px';
+    cheatButton.style.fontSize = '14px';
+    cheatButton.style.backgroundColor = '#0000FF';
+    cheatButton.style.color = 'white';
+    cheatButton.style.border = 'none';
+    cheatButton.style.borderRadius = '8px';
+    cheatButton.style.cursor = 'pointer';
+    cheatButton.addEventListener('click', () => {
+    if (confirm("Are you sure you want to use the text set? It will delete everything and only have text in your items.")) {
+            removeAll()
+            for (const text of getAllText()) {
+                add(" ", text)
+            }
+        location.reload()
+        } else {
+            alert("Items not removed");
+        }
+    });
+
     // Add a cheat button
     const cheatButton = document.createElement('button');
     cheatButton.textContent = 'Cheat';
@@ -288,6 +311,7 @@ button.addEventListener('click', () => {
         backups.load(prompt("Enter the backup name to load:"));
     });
 
+    box.appendChild(textButton);
     box.appendChild(cheatButton);
     box.appendChild(removeAllButton);
     box.appendChild(saveFileButton);
