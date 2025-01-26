@@ -2,7 +2,7 @@
 // @name            Infinite Craft Stuff
 // @namespace       https://ellinet13.github.io
 // @match           https://neal.fun/infinite-craft/*
-// @version         2.0
+// @version         2.1
 // @author          ElliNet13
 // @description     A script that adds stuff features to Infinite Craft.
 // @downloadURL     https://ellinet13.github.io/userscripts/ifadd.user.js
@@ -274,7 +274,7 @@ button.addEventListener('click', () => {
     loadFileButton.style.marginTop = '20px';
     loadFileButton.style.padding = '10px 20px';
     loadFileButton.style.fontSize = '14px';
-    loadFileButton.style.backgroundColor = '#808080';
+    loadFileButton.style.backgroundColor = '#007BFF';
     loadFileButton.style.color = 'white';
     loadFileButton.style.border = 'none';
     loadFileButton.style.borderRadius = '8px';
@@ -302,7 +302,7 @@ button.addEventListener('click', () => {
     loadBackupButton.style.marginTop = '20px';
     loadBackupButton.style.padding = '10px 20px';
     loadBackupButton.style.fontSize = '14px';
-    loadBackupButton.style.backgroundColor = '#808080';
+    loadBackupButton.style.backgroundColor = '#007BFF';
     loadBackupButton.style.color = 'white';
     loadBackupButton.style.border = 'none';
     loadBackupButton.style.borderRadius = '8px';
