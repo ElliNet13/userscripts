@@ -2,7 +2,7 @@
 // @name            Infinite Craft Stuff
 // @namespace       https://ellinet13.github.io
 // @match           https://neal.fun/infinite-craft/*
-// @version         2.1
+// @version         2.2
 // @author          ElliNet13
 // @description     A script that adds stuff features to Infinite Craft.
 // @downloadURL     https://ellinet13.github.io/userscripts/ifadd.user.js
@@ -147,7 +147,7 @@ button.addEventListener('click', () => {
     box.style.transform = 'translate(-50%, -50%)';
     box.style.width = '300px';
     box.style.height = '500px';
-    box.style.backgroundColor = JSON.parse(localStorage.getItem('infinite-craft-data')).darkMode ? '#808080' : '#FFFFFF';
+    box.style.backgroundColor = JSON.parse(localStorage.getItem('infinite-craft-data'))?.darkMode ? '#808080' : '#FFFFFF';
     box.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.2)';
     box.style.borderRadius = '12px';
     box.style.zIndex = '1001';
