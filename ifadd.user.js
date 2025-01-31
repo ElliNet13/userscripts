@@ -2,7 +2,7 @@
 // @name            Infinite Craft Stuff
 // @namespace       https://ellinet13.github.io
 // @match           https://neal.fun/infinite-craft/*
-// @version         2.2
+// @version         2.3
 // @author          ElliNet13
 // @description     A script that adds stuff features to Infinite Craft.
 // @downloadURL     https://ellinet13.github.io/userscripts/ifadd.user.js
