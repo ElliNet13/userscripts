@@ -12,10 +12,11 @@
 
 // Well its not a fix for the problen but at least you know it happened
 window.addEventListener('unhandledrejection', function(event) {
-    if (event.reason == "TypeError: element.text.toLowerCase is not a function") {
-        alert("That combo will not work! Infinite Craft can be a little glichy sometimes.")
+    if (event.reason.toString().includes("toLowerCase")) {
+        alert("That combo will not work! Infinite Craft can be a little glitchy sometimes.");
     }
 });
+
 
 // Make an invisible file input
 const fileInput = document.createElement('input');
