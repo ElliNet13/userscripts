@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Heart gifft autoclicker
 // @namespace    https://ellinet13.com
-// @version      1.0.2
+// @version      1.0.3
 // @description  Autocomplete heart giffts by autoclicking the heart
 // @author       ElliNet13
 // @match        https://gifft.me/o/hm/*
@@ -11,29 +11,6 @@
 // @updateURL    https://ellinet13.github.io/userscripts/gifft/heart.user.js
 // @downloadURL  https://ellinet13.github.io/userscripts/gifft/heart.user.js
 // ==/UserScript==
-
-// =========================
-// Status
-// =========================
-
-(function makeOverlay() {
-    const overlay = document.createElement("div");
-    overlay.id = "giftStatusOverlay";
-    overlay.textContent = "Heart gifft – autocompleting";
-    Object.assign(overlay.style, {
-        position: "fixed",
-        right: "10px",
-        bottom: "10px",
-        color: "gray",
-        fontSize: "14px",
-        fontFamily: "sans-serif",
-        opacity: "0.7",
-        pointerEvents: "none",
-        zIndex: 999999999
-    });
-    document.body.appendChild(overlay);
-})();
-
 
 // =========================
 // Mute
@@ -119,11 +96,7 @@ const CONTINUE_SELECTOR = "#open";
     if (cont) {
       running = false;
       cont.click();
-
-      // Update overlay text to completed
-      const overlay = document.getElementById("giftStatusOverlay");
-      if (overlay) overlay.textContent = "Heart gifft – autocompleted";
-
+      
       console.log("Open button detected and clicked. Auto-clicker stopped.");
       return;
     }
