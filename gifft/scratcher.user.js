@@ -5,6 +5,7 @@
 // @description  Completes scratcher giffts by automatically scratching the canvas
 // @author       ElliNet13
 // @match        https://gifft.me/o/s/*
+// @match        https://gifft.me/challenge/open/scratcher
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=gifft.me
 // @grant        none
 // @run-at       document-idle
