@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         Heart gifft autoclicker
 // @namespace    https://ellinet13.com
-// @version      1.0.0
+// @version      1.0.2
 // @description  Autocomplete heart giffts by autoclicking the heart
 // @author       ElliNet13
 // @match        https://gifft.me/o/hm/*
+// @match        https://gifft.me/challenge/open/your-heart
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=gifft.me
 // @grant        none
 // @updateURL    https://ellinet13.github.io/userscripts/gifft/heart.user.js
