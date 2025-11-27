@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Auto scratcher
 // @namespace    https://ellinet13.com
-// @version      1.1.2
+// @version      1.1.3
 // @description  Completes scratcher giffts by automatically scratching the canvas
 // @author       ElliNet13
 // @match        https://gifft.me/o/s/*
