@@ -13,7 +13,7 @@
 // ==/UserScript==
 
 // =========================
-// Mute (unchanged)
+// Mute
 // =========================
 (function enableAggressiveAutoMute() {
     function muteMedia(el) {
