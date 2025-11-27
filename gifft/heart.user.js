@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Heart gifft autoclicker
 // @namespace    https://ellinet13.com
-// @version      v1.0.0
+// @version      1.0.0
 // @description  Autocomplete heart giffts by autoclicking the heart
 // @author       ElliNet13
 // @match        https://gifft.me/o/hm/*

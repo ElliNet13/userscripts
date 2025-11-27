@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Balloon gifft autoclicker
 // @namespace    https://ellinet13.com
-// @version      v1.0.0
+// @version      1.0.0
 // @description  Autocomplete balloon giffts by autoclicking the balloons
 // @author       ElliNet13
 // @match        https://gifft.me/o/d/*

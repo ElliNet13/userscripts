@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Special gifft completer 1
 // @namespace    https://ellinet13.com
-// @version      v1.0.0
+// @version      1.0.0
 // @description  Completes: super box, surprise egg
 // @author       ElliNet13
 // @match        https://gifft.me/challenge/open/super-box
