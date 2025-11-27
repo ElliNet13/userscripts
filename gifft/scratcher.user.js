@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Auto scratcher
 // @namespace    https://ellinet13.com
-// @version      v1.0.0
+// @version      v1.0.1
 // @description  Completes scratcher giffts by automatically scratching the canvas
 // @author       ElliNet13
 // @match        https://gifft.me/o/s/*
@@ -15,7 +15,7 @@
 
 (function() {
 
-    // The exact canvas you gave
+    // The canvas
     const CANVAS_SELECTOR =
         "#__nuxt > div > div.text-primary.flex.min-h-screen.flex-col > main > div > div > div > div.align-center.absolute.z-\\[1\\].flex.size-fit.justify-center > canvas";
 
@@ -31,7 +31,7 @@
             requestAnimationFrame(() => fastFill(canvas));
         }
 
-        // If canvas disappeared, reset to restart later
+        // If canvas disappeared for somer eason, reset to restart later
         if (!canvas) running = false;
 
     }, 300);
@@ -63,10 +63,10 @@
 
         let y = rect.top + 1;
 
-        // ⚡ TUNE THIS based on brush size
+        // Brush row step in pixels
         const rowStep = 14;
 
-        // ⚡ Lines drawn per frame
+        // Number of rows to draw per animation frame
         const batchSize = 10;
 
         function batch() {
