@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         Balloon gifft autoclicker
 // @namespace    https://ellinet13.com
-// @version      1.0.0
+// @version      1.0.1
 // @description  Autocomplete balloon giffts by autoclicking the balloons
 // @author       ElliNet13
 // @match        https://gifft.me/o/d/*
+// @match        https://gifft.me/challenge/open/happy-birthday
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=gifft.me
 // @grant        none
 // @updateURL    https://ellinet13.github.io/userscripts/gifft/balloon.user.js
