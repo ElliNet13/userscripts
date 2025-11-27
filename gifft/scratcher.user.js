@@ -12,6 +12,8 @@
 // @downloadURL  https://ellinet13.github.io/userscripts/gifft/scratcher.user.js
 // ==/UserScript==
 
+// TODO: Make it actually sratch the gift instead of just showing the image
+
 (function() {
     'use strict';
 
