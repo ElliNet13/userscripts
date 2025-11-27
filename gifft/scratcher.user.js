@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Auto scratcher
 // @namespace    https://ellinet13.com
-// @version      2025-11-27
+// @version      v1.0.0
 // @description  Show images of Scratcher gifts
 // @author       ElliNet13
 // @match        https://gifft.me/o/s/*
