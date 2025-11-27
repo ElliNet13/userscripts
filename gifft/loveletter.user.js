@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         Love Letter gifft completer
 // @namespace    https://ellinet13.com
-// @version      v1.0.1
+// @version      v1.0.2
 // @description  Clicks the love letter gifft to complete it once the page is ready
 // @author       ElliNet13
 // @match        https://gifft.me/o/l/*
+// @match        https://gifft.me/challenge/open/love-letter
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=gifft.me
 // @grant        none
 // @run-at       document-idle
