@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Auto scratcher
 // @namespace    https://ellinet13.com
-// @version      v1.1.0
+// @version      v1.1.1
 // @description  Completes scratcher giffts by automatically scratching the canvas
 // @author       ElliNet13
 // @match        https://gifft.me/o/s/*
@@ -12,7 +12,75 @@
 // @downloadURL  https://ellinet13.github.io/userscripts/gifft/scratcher.user.js
 // ==/UserScript==
 
+// =========================
+// Mute
+// =========================
 
+(function enableAggressiveAutoMute() {
+  function muteMedia(el) {
+    try {
+      el.muted = true;
+      try { el.volume = 0; } catch(_) {}
+      try { if (!el.paused) el.pause(); } catch(_) {}
+    } catch(_) {}
+  }
+
+  document.querySelectorAll("video, audio").forEach(muteMedia);
+
+  const obs = new MutationObserver(mutations => {
+    for (const m of mutations) {
+      for (const n of m.addedNodes) {
+        if (!n || n.nodeType !== 1) continue;
+        const tag = n.tagName?.toUpperCase();
+        if (tag === "VIDEO" || tag === "AUDIO") muteMedia(n);
+        n.querySelectorAll?.("video, audio").forEach(muteMedia);
+      }
+    }
+  });
+  obs.observe(document.documentElement, { childList: true, subtree: true });
+
+  const origCreate = Document.prototype.createElement;
+  Document.prototype.createElement = function(tag, opts) {
+    const el = origCreate.call(this, tag, opts);
+    if (["VIDEO","AUDIO"].includes(String(tag).toUpperCase())) {
+      Promise.resolve().then(() => muteMedia(el));
+    }
+    return el;
+  };
+
+  const origAttach = Element.prototype.attachShadow;
+  Element.prototype.attachShadow = function(init) {
+    const root = origAttach.call(this, init);
+    const shadowObs = new MutationObserver(mutations => {
+      for (const m of mutations) {
+        for (const n of m.addedNodes) {
+          if (!n || n.nodeType !== 1) continue;
+          const tag = n.tagName?.toUpperCase();
+          if (tag === "VIDEO" || tag === "AUDIO") muteMedia(n);
+          n.querySelectorAll?.("video, audio").forEach(muteMedia);
+        }
+      }
+    });
+    shadowObs.observe(root, { childList: true, subtree: true });
+    return root;
+  };
+
+  const origPlay = HTMLMediaElement.prototype.play;
+  HTMLMediaElement.prototype.play = function() {
+    muteMedia(this);
+    return origPlay.apply(this, arguments);
+  };
+
+  const playHandler = ev => muteMedia(ev.target);
+  document.addEventListener("play", playHandler, true);
+  document.addEventListener("playing", playHandler, true);
+
+  console.log("Aggressive auto-mute enabled.");
+})();
+
+// =========================
+// Auto scratcher
+// =========================
 (function() {
 
     // The canvas
