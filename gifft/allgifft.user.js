@@ -2,6 +2,7 @@
 // @name         Gifft ALL Userscript Loader
 // @namespace    https://ellinet13.com
 // @version      1.0.0
+// @author       ElliNet13
 // @description  Loads gifft-related userscripts from the GitHub repository based on the current page URL.
 // @match        https://gifft.me/*
 // @grant        GM_xmlhttpRequest
