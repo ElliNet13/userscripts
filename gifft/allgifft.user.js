@@ -5,6 +5,7 @@
 // @author       ElliNet13
 // @description  Loads gifft-related userscripts from the GitHub repository based on the current page URL.
 // @match        https://gifft.me/*
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=gifft.me
 // @grant        GM_xmlhttpRequest
 // @connect      api.github.com
 // @connect      raw.githubusercontent.com
