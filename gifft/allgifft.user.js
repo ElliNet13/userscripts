@@ -7,6 +7,9 @@
 // @grant        GM_xmlhttpRequest
 // @connect      api.github.com
 // @connect      raw.githubusercontent.com
+// @run-at       document-idle
+// @updateURL    https://ellinet13.github.io/userscripts/gifft/allgifft.user.js
+// @downloadURL  https://ellinet13.github.io/userscripts/gifft/allgifft.user.js
 // ==/UserScript==
 
 (function() {
